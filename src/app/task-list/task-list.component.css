@@ -1,0 +1,39 @@
+div {
+  border-radius: 5px;
+  margin-inline-start: 5px;
+  width: 99%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 1px;
+}
+
+p {
+  padding-inline: 15px;
+  width: 80%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  p {
+    width: 70%;
+  }
+
+  div {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  p {
+    width: 65%;
+  }
+
+  div {
+    width: 98%;
+  }
+}

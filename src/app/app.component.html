@@ -1,0 +1,27 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="row w-75 justify-content-center">
+    <h1 class="text-dark mt-3">Task Manager</h1>
+    <app-task-list
+      [taskName]="task"
+      [taskList]="taskArray"
+      [editing]="edit"
+      [taskIndex]="gotIndex"
+      style="height: 450px"
+      class="overflow-scroll overflow-x-hidden mx-auto"
+      (sendID)="getIndex($event)"
+      (sendInstruct)="checkInstruct($event)"
+    ></app-task-list>
+    <div
+      class="row d-flex justify-content-between align-items-center mt-4 taskInput p-2"
+    >
+      <input
+        class="input-text my-1"
+        type="text"
+        id="task"
+        [(ngModel)]="task"
+        (keydown.enter)="addTask()"
+      />
+      <button class="btn float-end" (click)="addTask()">Save</button>
+    </div>
+  </div>
+</div>
